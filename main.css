@@ -11,12 +11,14 @@ body {
 #paper {
   background-color: black;
   color: #e1e8f2;
+  padding-left: 20%;
 }
 
 #paper img {
   float: left;
   display: block;
   grid-template: inline;
+  padding-left: 10%;
 }
 
 paper:hover {
