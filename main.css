@@ -2,24 +2,27 @@ body {
   background-color: black;
 }
 
-
-
-
-
+#paper h1 {
+  text-align: center;
+}
 
 
 
 #paper {
   background-color: black;
-  color: white;
+  color: #e1e8f2;
 }
 
-#paper h1 p {
-  /* float: left; */
+#paper img {
+  float: left;
   display: block;
   grid-template: inline;
 }
 
+paper:hover {
+background-color: grey;
+color: red;
+}
 
 
 
