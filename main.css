@@ -2,11 +2,54 @@ body {
   background-color: black;
 }
 
-#paper h1 {
-  text-align: center;
+.mation {
+  padding-left: 5%;
+  padding-top: 30px;
+  display: grid;
+  grid-template: 250px / 400px 400px 400px;
+  grid-gap: 10px;
+}
+
+.image {
+  display: block;
+  width: 350px;
+  height: 250px;
 }
 
 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+ width: 0;
+ height: 100%;
+ transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+#paper h1 {
+  text-align: center;
+}
 
 #paper {
   background-color: black;
@@ -14,11 +57,20 @@ body {
   padding-left: 20%;
 }
 
+#paper div:grid {
+  display:grid;
+  grid-template: inline;
+}
 #paper img {
-  float: left;
-  display: block;
+
+  display: grid;
   grid-template: inline;
   padding-left: 10%;
+}
+
+@keyframes transform {
+  from{left:0px;}
+  to{left:300px;}
 }
 
 paper:hover {
@@ -26,25 +78,20 @@ background-color: grey;
 color: red;
 }
 
-
-
-
-
 nav ul li a:hover {
-  background-color: white;
+  background-color: grey;
   color: green;
 }
 
-
-/* navbar ul li a:hover {
-  background-color: grey;
-  color: white;
-} */
-
-
+#paper-grid div:nth-child(2) {
+  background-image: url("https://media.giphy.com/media/2KL3lBdBTFxOo/giphy.gif");
+  background-position: 50% 40%;
+  background-size: cover;
+}
 
 
 #navbar-container {
+  font-color: white;
   padding: 0px;
   height: 0px;
   text-align: center;
@@ -56,16 +103,23 @@ nav ul li a:hover {
   width: 100%;
   padding-left: 0px;
   margin-bottom: 0%;
-  text-align: right;
+  text-align: center;
   color: white;
+  border-bottom: 1px solid #858585;
 }
 #navbr img {
   margin-bottom: 0%;
   display: grid;
   grid-template: inline;
+  text-align: center;
 }
 
 #navbr ul li {
   display: inline;
   padding: 0 25px;
+}
+
+
+#navbr a {
+  color: white;
 }
